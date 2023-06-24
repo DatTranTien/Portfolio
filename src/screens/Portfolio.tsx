@@ -1,4 +1,4 @@
-import React from 'react'
+
 import Preloader from '../component/Preloader'
 import LeftPart from '../component/LeftPart'
 import RightPart from '../component/RightPart'

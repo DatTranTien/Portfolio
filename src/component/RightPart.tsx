@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import  { useState } from 'react'
 import HomeCV from './content/HomeCV'
 import avatar from '@/assets/img/about/avatar.jpg'
 import men from '@/assets/img/svg/men.png'
@@ -6,10 +6,21 @@ import mern from '@/assets/img/svg/mern.png'
 import ReactFirebase from '@/assets/img/svg/ReactFirebase.png'
 import react_firebase_v2 from '@/assets/img/svg/react-firebase-v2.jpeg'
 import typescript from '@/assets/img/svg/typescript.jpeg'
-import { Button, Modal } from 'antd';
+import { Modal } from 'antd';
 export default function RightPart() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [item, setItem] = useState({});
+  const [item, setItem] = useState({
+      "title":  'Course App',
+  "description": `App Mobile hỗ trợ mua bán khoá học, học trực tuyến, làm bài tập dạng chatbot, xem tin tức, tuyển dụng ...`,
+  "frontend": `React Native`,
+  "backend": 'Firebase',
+  "member": 1,
+  "role": 'Developer',
+  "demo":'https://www.youtube.com/watch?v=lc05iLfcu7o&feature=youtu.be&ab_channel=G%E1%BA%A5uTr%E1%BA%A7n',
+  "github":'https://github.com/DatTranTien/CourseApp',
+  "backendRunning":'',
+    "swagger":'',
+  });
 
   const showModal = (name:any) => {
     if (name=="Course") {
@@ -22,6 +33,8 @@ export default function RightPart() {
     "role": 'Developer',
     "demo":'https://www.youtube.com/watch?v=lc05iLfcu7o&feature=youtu.be&ab_channel=G%E1%BA%A5uTr%E1%BA%A7n',
     "github":'https://github.com/DatTranTien/CourseApp',
+    "backendRunning":'',
+    "swagger":'',
         })
     }
     if (name=="Review") {
@@ -34,6 +47,8 @@ export default function RightPart() {
     "role": 'Developer',
     "demo":'https://play.google.com/store/apps/details?id=com.review_book&fbclid=IwAR052LVJVcPygpB2gF8624ppeN01u13dNr5tPXZQGZpuCwRTgPF0KvlNWZM',
     "github":'https://github.com/DatTranTien/Review_Books',
+    "backendRunning":'',
+    "swagger":'',
         })
     }
     if (name=="Cv") {
@@ -44,8 +59,10 @@ export default function RightPart() {
     "backend": 'NO',
     "member": 1,
     "role": 'Developer',
-    // "demo":'',
+    "demo":'',
     "github":'https://github.com/DatTranTien/Web-Portfolio',
+    "backendRunning":'',
+    "swagger":'',
         })
     }
     if (name=="Manage") {
@@ -70,8 +87,10 @@ export default function RightPart() {
     "backend": 'NodeJS, ExpressJS, MongoDB',
     "member": 1,
     "role": 'Developer',
-    // "demo":'https://librarybook-t3ji.onrender.com/',
+    "demo":'https://github.com/DatTranTien/e-shop',
     "github":'https://github.com/DatTranTien/e-shop',
+    "backendRunning":'',
+    "swagger":'',
         })
     }
     setIsModalOpen(true);
@@ -100,11 +119,11 @@ export default function RightPart() {
             <li>Demo: <a href={item?.demo} >{item?.demo}</a> </li>
             <li>Github: <a href={item?.github}>{item?.github}</a></li>
             {item?.backendRunning
-            ?()=><>
+            ?<>
               <li>Backend Demo : <a href={item?.backendRunning}>{item?.backendRunning}</a></li>
             <li>Swagger: <a href={item?.swagger}>{item?.swagger} (Nó load hơi lâu xíu, thông cảm cho mình nha :v)</a></li>
             </>
-          :null
+          :<></>
           }
             
           </ul>

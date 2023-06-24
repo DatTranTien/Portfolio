@@ -1,4 +1,4 @@
-import React from 'react'
+
 import desktop_logo1 from '../assets/img/logo/desktop-logo1.png';
 
 export default function LeftPart() {
