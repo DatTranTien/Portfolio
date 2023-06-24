@@ -90,9 +90,6 @@ export default function RightPart() {
       <div className="rightpart_inner">
         <HomeCV />
         <>
-        <Button type="primary" onClick={showModal}>
-          Open Modal
-        </Button>
         <Modal title={`Dự án ${item?.title}`} open={isModalOpen} onOk={handleOk} onCancel={handleCancel}>
           <ul>
             <li>Miêu tả: {item?.description}</li>
@@ -120,7 +117,7 @@ export default function RightPart() {
             <div className="container">
               <div className="arlo_tm_title_holder">
                 <h3>About Me</h3>
-                <span>Vài điều về bản thân...</span>
+                <span>Vài điều về bản thân mình...</span>
               </div>
               <div className="arlo_tm_about_wrap">
                 <div className="author_wrap">
@@ -236,7 +233,7 @@ export default function RightPart() {
                   </div>
                   <ul>
                     <li>Ngôn ngữ lập trình: React Native, Android (kotlin) </li>
-                    <li>OOP, MVVM, design pattern</li>
+                    <li>OOP, MVVM, design pattern, Redux (saga, thunk, RTK Query,Persist),...</li>
                   </ul>
                 </div>
 
@@ -246,7 +243,7 @@ export default function RightPart() {
                   </div>
                   <ul>
                     <li>Công cụ: Figma </li>
-                    <li>Xây dựng WireFrame, UserFlow</li>
+                    <li>Xây dựng WireFrame, UserFlow,...</li>
                   </ul>
                 </div>
 
@@ -313,7 +310,7 @@ export default function RightPart() {
                         <img className="svg" src={men} alt="share" />
                       </div>
                       <div className="title_service">
-                        <h3>Quản Lý sách</h3>
+                        <h3>Book Management</h3>
                       </div>
                       <div className="text">
                         <p>Web sử dụng cơ chế SSR, xây dựng Frontend bằng template EJS và xây dựng Backend bằng NodeJS+ExpressJS, chức năng đăng nhập , đăng ký, CRUD user, sách, authors, ...</p>
